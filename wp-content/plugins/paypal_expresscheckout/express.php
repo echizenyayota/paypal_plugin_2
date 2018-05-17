@@ -19,3 +19,10 @@ function paypal_scripts() {
 	wp_enqueue_script( 'paypal-expresscheckout', plugin_dir_url( __FILE__ ) . '/js/expresscheckout.js', array( 'paypal-checkout' ) );
 }
 add_action( 'wp_enqueue_scripts', 'paypal_scripts' );
+
+// ショートコード記述によるPayPalボタンの表示
+function paypaldiv_func(){
+  $paypaldiv = '<div id="paypal-button-container"></div>';
+  return $paypaldiv;
+}
+add_shortcode( 'paypaldiv', 'paypaldiv_func' );
