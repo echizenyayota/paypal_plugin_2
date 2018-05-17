@@ -12,3 +12,10 @@ Author URI: https://e-yota.com
 License: GPLv2 or later
 Text Domain: paypal_expresscheckout
 */
+
+// Client Side Restの読み込み
+function paypal_scripts() {
+	wp_enqueue_script( 'paypal-checkout', 'https://www.paypalobjects.com/api/checkout.js' );
+	wp_enqueue_script( 'paypal-expresscheckout', plugin_dir_url( __FILE__ ) . '/js/expresscheckout.js', array( 'paypal-checkout' ) );
+}
+add_action( 'wp_enqueue_scripts', 'paypal_scripts' );
