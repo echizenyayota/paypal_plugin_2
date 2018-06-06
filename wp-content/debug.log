@@ -92,3 +92,19 @@
 [06-Jun-2018 07:48:30 UTC] PHP  13. preg_replace_callback() /var/www/wordpress/wp-includes/shortcodes.php:197
 [06-Jun-2018 07:48:30 UTC] PHP  14. do_shortcode_tag() /var/www/wordpress/wp-includes/shortcodes.php:197
 [06-Jun-2018 07:48:30 UTC] PHP  15. paypaldiv_func() /var/www/wordpress/wp-includes/shortcodes.php:319
+[06-Jun-2018 08:35:55 UTC] PHP Warning:  require_once(/var/www/wordpress/wp-content/plugins/paypal_expresscheckout/express_admin.php): failed to open stream: No such file or directory in /var/www/wordpress/wp-content/plugins/paypal_expresscheckout/express.php on line 80
+[06-Jun-2018 08:35:55 UTC] PHP Stack trace:
+[06-Jun-2018 08:35:55 UTC] PHP   1. {main}() /var/www/wordpress/index.php:0
+[06-Jun-2018 08:35:55 UTC] PHP   2. require() /var/www/wordpress/index.php:17
+[06-Jun-2018 08:35:55 UTC] PHP   3. require_once() /var/www/wordpress/wp-blog-header.php:13
+[06-Jun-2018 08:35:55 UTC] PHP   4. require_once() /var/www/wordpress/wp-load.php:37
+[06-Jun-2018 08:35:55 UTC] PHP   5. require_once() /var/www/wordpress/wp-config.php:77
+[06-Jun-2018 08:35:55 UTC] PHP   6. include_once() /var/www/wordpress/wp-settings.php:305
+[06-Jun-2018 08:35:55 UTC] PHP Fatal error:  require_once(): Failed opening required '/var/www/wordpress/wp-content/plugins/paypal_expresscheckout/express_admin.php' (include_path='.:/usr/share/php') in /var/www/wordpress/wp-content/plugins/paypal_expresscheckout/express.php on line 80
+[06-Jun-2018 08:35:55 UTC] PHP Stack trace:
+[06-Jun-2018 08:35:55 UTC] PHP   1. {main}() /var/www/wordpress/index.php:0
+[06-Jun-2018 08:35:55 UTC] PHP   2. require() /var/www/wordpress/index.php:17
+[06-Jun-2018 08:35:55 UTC] PHP   3. require_once() /var/www/wordpress/wp-blog-header.php:13
+[06-Jun-2018 08:35:55 UTC] PHP   4. require_once() /var/www/wordpress/wp-load.php:37
+[06-Jun-2018 08:35:55 UTC] PHP   5. require_once() /var/www/wordpress/wp-config.php:77
+[06-Jun-2018 08:35:55 UTC] PHP   6. include_once() /var/www/wordpress/wp-settings.php:305
