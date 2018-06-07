@@ -26,6 +26,8 @@ function paypaldiv_func( $atts ){
     'id' => '',	// id名と第二引数が合致すれば良い
     'price' => '0',
 		'currency' => ''
+    'color' => 'blue',
+		'size' => 'small',
 	), $atts );
 
   $paypaldiv = '<div id="' . $config['id'] . '"></div>';
@@ -36,8 +38,8 @@ function paypaldiv_func( $atts ){
 				'AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R',
 			},
 			style: {
-				color: 'blue',
-				size: 'small',
+				color: '$config[color]',
+				size: '$config[size]',
 			},
 			commit: true,
 			payment: function(data, actions) {
