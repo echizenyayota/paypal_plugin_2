@@ -25,17 +25,21 @@ function paypaldiv_func( $atts ){
   $config = shortcode_atts( array(
     'id' => '',	// id名と第二引数が合致すれば良い
     'price' => '0',
-		'currency' => ''
+		'currency' => '',
+    'env' => 'sandbox',
     'color' => 'blue',
 		'size' => 'small',
 	), $atts );
+
+  $token = "sandbox: 'AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R'";
+
 
   $paypaldiv = '<div id="' . $config['id'] . '"></div>';
   $paypaldiv .= "<script>
 		paypal.Button.render({
 			env: 'sandbox',
 			client: {
-				'AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R',
+				{$token},
 			},
 			style: {
 				color: '$config[color]',

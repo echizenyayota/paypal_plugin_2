@@ -10,3 +10,4 @@
 [07-Jun-2018 05:32:37 UTC] PHP Parse error:  syntax error, unexpected 'paypal' (T_STRING) in /var/www/wordpress/wp-content/plugins/paypal_expresscheckout/express.php on line 50
 [07-Jun-2018 05:33:43 UTC] PHP Parse error:  syntax error, unexpected 'paypal' (T_STRING) in /var/www/wordpress/wp-content/plugins/paypal_expresscheckout/express.php on line 50
 [07-Jun-2018 05:33:45 UTC] PHP Parse error:  syntax error, unexpected 'paypal' (T_STRING) in /var/www/wordpress/wp-content/plugins/paypal_expresscheckout/express.php on line 50
+[07-Jun-2018 07:08:13 UTC] PHP Parse error:  syntax error, unexpected ''color'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in /var/www/wordpress/wp-content/plugins/paypal_expresscheckout/express.php on line 29
