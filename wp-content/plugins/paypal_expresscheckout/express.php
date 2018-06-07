@@ -24,6 +24,8 @@ function paypaldiv_func( $atts ){
 
   $config = shortcode_atts( array(
     'id' => '',	// id名と第二引数が合致すれば良い
+    'price' => '0',
+		'currency' => ''
 	), $atts );
 
   $paypaldiv = '<div id="' . $config['id'] . '"></div>';
@@ -42,7 +44,7 @@ function paypaldiv_func( $atts ){
 				return actions.payment.create({
 					payment: {
 						transactions: [{
-							amount: { total: '1000', currency: 'JPY' }
+							amount: { total: '$config[price]', currency: '$config[currency]' }
 						}]
 					}
 				});
