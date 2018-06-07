@@ -20,8 +20,13 @@ function paypal_scripts() {
 add_action( 'wp_enqueue_scripts', 'paypal_scripts' );
 
 // ショートコードとオプションによるPayPalボタンの表示
-function paypaldiv_func(){
-  $paypaldiv = '<div id="paypal-button-container"></div>';
+function paypaldiv_func( $atts ){
+
+  $config = shortcode_atts( array(
+    'id' => '',	// id名と第二引数が合致すれば良い
+	), $atts );
+
+  $paypaldiv = '<div id="' . $config['id'] . '"></div>';
   $paypaldiv .= "<script>
 		paypal.Button.render({
 			env: 'sandbox',
@@ -47,7 +52,7 @@ function paypaldiv_func(){
 					window.alert('Payment Complete!');
 				});
 			}
-		}, '#paypal-button-container');
+		}, '#$config[id]');
 	</script>";
 
   // スクリプトの記述が表示される
