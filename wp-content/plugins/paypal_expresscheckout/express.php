@@ -19,6 +19,14 @@ function paypal_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'paypal_scripts' );
 
+// ショートコードとオプションによるPayPalボタンの表示
+function paypaldiv_func(){
+
+  
+  // スクリプトの記述が表示される
+  return $paypaldiv;
+}
+add_shortcode( 'paypaldiv', 'paypaldiv_func' );
 
 
 // サブメニュープラグイン設定の表示
